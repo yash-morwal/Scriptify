@@ -1,0 +1,10 @@
+@media (min-width : 800px) {
+    .sidebarContainer{
+        border-right: 2px solid rgba(207, 207, 207, 0.31);
+        height: 93vh;
+        width: 25vw;
+    }
+}
+.sidebarContainer{
+    background-color: transparent;
+}
