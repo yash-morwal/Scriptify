@@ -1,0 +1,223 @@
+.sidebarContainer {
+    height: 100%;
+    width: 28vw;
+    min-width: 380px;
+    background-color: rgba(255, 0, 0, 0);
+    border-right: 2px solid rgba(69, 69, 69, 0.425);
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 30px;
+    font-family: 'Varela';
+    overflow-y: auto;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 300px;
+    gap: 20px;
+    font-family: 'Varela Round', 'Inter', sans-serif;
+}
+
+.nichearea {
+    height: 58px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nicheInputBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #2D2D2D;
+    border-radius: 7px;
+    border: 2px solid #a4a4a44d;
+    overflow: hidden;
+    width: 100%;
+}
+
+.nicheLabel {
+    background-color: #222222;
+    height: 100%;
+    color: white;
+    font-family: 'Varela Round', 'Inter', sans-serif;
+    font-size: 14px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-right: 2px solid #a4a4a44d;
+}
+
+#nicheInput {
+    background-color: transparent;
+    font-family: 'Varela Round', 'Inter', sans-serif;
+    height: 100%;
+    flex: 1;
+    border: none;
+    padding-left: 15px;
+    font-size: 15px;
+    caret-color: white;
+    color: white;
+}
+
+#nicheInput:focus {
+    border: none;
+    outline: none;
+}
+
+#description {
+    resize: none;
+    height: 150px;
+    background-color: #2d2d2d;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    font-family: 'Varela Round', 'Inter', sans-serif;
+    font-size: 14.5px;
+    border-radius: 7px;
+    color: white;
+    border: 2px solid #a4a4a44d;
+    width: 100%;
+
+}
+
+#description::-webkit-scrollbar {
+    display: none;
+
+}
+.toneInput{
+    width: 110%;
+}
+.labelForTone{
+    margin-left: 5%;
+}
+#description:focus {
+    border: none;
+    outline: none;
+    border: 2px solid #a4a4a44d;
+    caret-color: rgb(192, 192, 192);
+}
+
+.toneButtons {
+    display: flex;
+    border: 1px solid rgb(61, 61, 61);
+    /* width: 110%; */
+    height: 35px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.tones {
+    outline: none;
+    border: none;
+    border-right: 2px solid rgba(86, 86, 86, 0.534);
+    min-width: fit-content;
+    text-align: center;
+    min-width: 0;
+    /* prevents overflow */
+    font-family: 'Roboto', 'Inter', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    flex: auto;
+    padding: 8px 0;
+    min-width: 0;
+    white-space: nowrap;
+}
+
+.selected {
+    background-color: rgb(255, 255, 255);
+    color: rgb(4, 4, 4);
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.10s ease;
+}
+
+.unselected {
+    background-color: #1b1b1b;
+    color: rgb(225, 225, 225);
+    transition: all 0.20s ease;
+}
+
+.label {
+    color: rgb(255, 255, 255);
+    font-family: 'Varela Round';
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 800;
+    width: 80px;
+}
+
+hr {
+    opacity: 0.0;
+    margin: 0;
+    padding: 0;
+}
+
+.Buttons {
+    outline: none;
+    border: none;
+    border: 1px solid rgba(90, 90, 90, 0.434);
+    padding: 5px 10px;
+    width: 25%;
+    font-family: 'Inter', 'Varela Round', 'Inter', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 20px;
+    flex: 1;
+    height: 35px;
+}
+
+.segmbuttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2px;
+    flex: 1;
+    width: 200px;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.subButton {
+    height: fit-content;
+    padding: 5px 30px;
+    display: flex;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Varela Round';
+    font-weight: 400;
+    font-size: large;
+    border: none;
+    outline: none;
+    opacity: 0.9;
+}
+.subButton:hover{
+    opacity: 1;
+}
+.getIdea{
+    background-color: #16718a ;
+}
+.getScript{
+    background-color: #16718a
+}
+.submitButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    gap: 10px;
+}
