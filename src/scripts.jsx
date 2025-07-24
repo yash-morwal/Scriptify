@@ -84,25 +84,25 @@ export default function Script(props) {
 
     return (
         <>
-            {!user.load && user.scriptStatus && <div className="scriptandbtn">
-                <button onClick={() => prevScript()} className={`prevScript scriptBtn ${displayScriptIndex === 0 ? 'unsel' : 'sel'}`}><svg xmlns="http://www.w3.org/2000/svg" className='arrowIconSVG' width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            {!user.load && user.scriptStatus && <div className="scriptandbtn flex flex-row h-full">
+                <button onClick={() => prevScript()} className={`prevScript scriptBtn text-lg flex items-center justify-center p-[2px] h-[25px] w-[25px] rounded-[50px] self-center m-[15px] absolute left-5 ${displayScriptIndex === 0 ? 'unsel' : 'sel'}`}><svg xmlns="http://www.w3.org/2000/svg" className='arrowIconSVG' width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M15 6l-6 6 6 6" />
                 </svg>
                 </button>
-                <div className="script">
+                <div className="script ml-[50px] min-h-[20vh] max-h-[85vh]">
                     <ReactMarkdown>
                         {scripts[displayScriptIndex]}
                     </ReactMarkdown>
                 </div>
-                <button onClick={() => nextScript()} className={`nextScript scriptBtn ${displayScriptIndex === user.chosenTopic.length - 1 ? 'unsel' : 'sel'}`}><svg className='arrowIconSVG' xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <button onClick={() => nextScript()} className={`nextScript scriptBtn text-lg flex items-center justify-center p-[2px] h-[25px] w-[25px] rounded-[50px] self-center m-[15px] absolute right-5 ${displayScriptIndex === user.chosenTopic.length - 1 ? 'unsel' : 'sel'}`}><svg className='arrowIconSVG' xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M9 18l6-6-6-6" />
                 </svg>
                 </button>
 
                 <div class="slider-indicators">
-                    <div class={`indicator ${displayScriptIndex === 0 ? 'active' : ''}`}></div>
-                    <div class={`indicator ${displayScriptIndex === 1 ? 'active' : ''}`}></div>
-                    <div class={`indicator ${displayScriptIndex === 2 ? 'active' : ''}`}></div>
+                    {scripts.length >= 2 && <div class={`indicator ${displayScriptIndex === 0 ? 'active' : ''}`}></div>}
+                    {scripts.length >= 2 && <div class={`indicator ${displayScriptIndex === 1 ? 'active' : ''}`}></div>}
+                    {scripts.length === 3 && <div class={`indicator ${displayScriptIndex === 2 ? 'active' : ''}`}></div>}
                 </div>
 
             </div>}

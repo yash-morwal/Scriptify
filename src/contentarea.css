@@ -1,12 +1,7 @@
 .contentContainer {
-    background-color: rgba(144, 144, 144, 0);
-    flex: 1;
+    /* background-color: rgba(144, 144, 144, 0); */
     color: white;
     font-family: 'Inter';
-    box-sizing: border-box;
-    padding: 20px 60px;
-    display: flex;
-    position: relative;
 }
 
 .ideasContainer h1,
@@ -24,16 +19,12 @@ ol {
 }
 
 .list {
-    margin: 2px 0;
-    list-style: none;
     color: rgb(221, 221, 221);
     background-color: transparent;
     font-family: 'Varela Round';
     border: 1px solid rgba(228, 228, 228, 0);
     border-radius: 4px;
-    font-size: 16px;
     text-align: left;
-    padding: 1px 15px;
     width: fit-content;
     line-height: 1.5;
 }
@@ -80,9 +71,6 @@ ol {
     transform: translate(-50%, 0);
     pointer-events: auto;
 }
-.scriptContainer{
-    flex: 1;
-}
 
 .scriptContainer h1,
 h2 {
@@ -102,14 +90,10 @@ h2 {
     /* list-style: none; */
 }
 .script{
-    width: 700px;
-    margin-left: 50px;
-    min-height: 84vh;
-    max-height: 85vh;
     overflow-y: auto; 
 }
 .script::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 .script p{
     /* margin: 15px 10px; */
@@ -122,44 +106,14 @@ h2 {
     line-height: 25px; 
 }
 .scriptBtn{
-    /* color: rgb(147, 147, 147); */
-
-    
     background-color: transparent;
     outline: none;
     border: none;
-    font-size: large;
     cursor: pointer;
     background-color: rgb(65, 65, 65);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2px 2px 2px 2px;
-    border-radius: 50px;
-    height: 25px;
-    width: 25px;
-    align-self: center;
-    margin: 15px;
 }
-.prevScript{
-    position: absolute;
-    left: 20px;
-}
-.nextScript{
-    position: absolute;
-    right: 20px;
-}
-.ctaButtons{
-    display: flex;
-    font-family: 'Varela Round';
-    gap: 20px;
-    
-}
-.scriptandbtn{
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-}
+
+
 .unsel{
     color: transparent;
     background-color: transparent;
@@ -167,7 +121,6 @@ h2 {
 }
 .sel{
     color: rgb(206, 206, 206);
-    
 }
 
 .sel:hover{

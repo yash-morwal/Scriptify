@@ -50,7 +50,7 @@ export default function ContentArea(props) {
 
     const list = listData.map((item, index) => {
         return (
-            <li onClick={() => { selectTopic(item) }} key={index} className={`list ${user.chosenTopic.includes(item) ? 'selectedli' : 'unselectedLi'}`}>{"• " + item}</li>
+            <li onClick={() => { selectTopic(item) }} key={index} className={`list my-[2px] text-[16px] px-[15px]  ${user.chosenTopic.includes(item) ? 'selectedli' : 'unselectedLi'}`}>{"• " + item}</li>
         )
     })
 
@@ -65,7 +65,7 @@ export default function ContentArea(props) {
 
     return (
 
-        <div className="contentContainer">
+        <div className="contentContainer flex-1 border-box px-15 py-5 flex relative">
             <div className={`popup ${showPopup ? 'show' : ''}`}>You can select only 3 items. Click again to remove</div>
             <div className="ideasContainer">
                 {user.load && <h1 className='contentHeading'>Loading...</h1>}
@@ -74,7 +74,7 @@ export default function ContentArea(props) {
                     {list}
                 </ul>}
             </div>
-            <div className="scriptContainer">
+            <div className="scriptContainer flex-1">
                 <Script />
             </div>
         </div>

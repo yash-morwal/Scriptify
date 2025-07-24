@@ -1,10 +1,9 @@
-import './navbar.css'
+
 
 export default function Navbar(){
     return(
-        <div className="navbar">
-            <div className="heading">Scriptify</div>
-            {/* <span className="tagline">Create scripts in just clicks <img src="cursor.png" alt="" className='pointer'/></span> */}
+        <div className="navbar w- h-[45px] bg-[#0e6c91] flex flex-row items-center">
+            <div className="heading flex flex-col w-[125px] h-[100%] ml-[30px] text-[2rem] text-[#ffffff] font-[600] font-[Inter] justify-center">Scriptify</div>
             <div className="others"></div>
         </div>
     )
