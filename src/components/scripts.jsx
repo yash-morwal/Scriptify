@@ -1,8 +1,8 @@
 import Groq from 'groq-sdk'
-import { getResponseai } from './Groq.js'
+import { getResponseai } from '../Groq.js'
 import ReactMarkdown from 'react-markdown'
 import React, { use } from 'react'
-import { UserContext } from './App.jsx'
+import { UserContext } from '../App.jsx'
 
 export default function Script(props) {
 

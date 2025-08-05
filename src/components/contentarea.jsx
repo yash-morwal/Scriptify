@@ -1,16 +1,16 @@
-import './contentarea.css'
 import ReactMarkdown from 'react-markdown'
 import React from 'react'
 import Script from './scripts'
-import { UserContext } from './App'
+import { UserContext } from '../App'
 
 export default function ContentArea(props) {
 
     const user = React.useContext(UserContext)
     const [response, setResponse] = React.useState("")
-    const [listData, setListData] = React.useState([]) 
+    const [listData, setListData] = React.useState([])
     const [showPopup, setShowPopup] = React.useState(false)
 
+    
     function selectTopic(i) {
         user.setChosenTopic(prev => {
             if (prev.includes(i)) {
@@ -65,7 +65,7 @@ export default function ContentArea(props) {
 
     return (
 
-        <div className="contentContainer flex-1 border-box px-15 py-5 flex relative">
+        <div className="contentContainer containerclr containerrd flex-1 border-box px-10 py-2 flex relative">
             <div className={`popup ${showPopup ? 'show' : ''}`}>You can select only 3 items. Click again to remove</div>
             <div className="ideasContainer">
                 {user.load && <h1 className='contentHeading'>Loading...</h1>}
