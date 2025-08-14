@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Navbar from './components/navbar'
 import ContentArea from './components/contentarea'
 import Sidebar from './components/sidebar'
-import Apitestlab from './components/apitestlab'
+import Apitestlab from './components/Apitestlab'
 
 
 const UserContext = React.createContext()
