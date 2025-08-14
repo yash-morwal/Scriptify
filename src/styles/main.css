@@ -4,6 +4,7 @@
 :root{
   --accent-color: #9ECAB7;
   --accent-color-bg: #26362f93;
+  --accent-color-bg-full: #26362f;
   --strokes : #4c4c4c;
 }
 
@@ -182,10 +183,10 @@ ol {
 }
 
 .selectedli {
-    background-color: var(--accent-color-bg);
+    background-color: var(--accent-color-bg-full);
     color: var(--accent-color);
     font-weight: 500;
-    border: 1px solid var(--accent-color);
+    /* border: 1px solid var(--accent-color); */
 }
 .selectedli:hover {
     background-color: var(--accent-color-bg);
@@ -219,7 +220,7 @@ ol {
 }
 
 .scriptContainer h1,
-h2 {
+h2, h3 {
     margin: 20px 0 25px 0px;
     font-size: 32px;
     font-weight: 600;
@@ -228,10 +229,11 @@ h2 {
 .scriptContainer ul, ol {
     margin: 7px 25px;
     display: flex;
+    list-style-type: disc;
     flex-direction: column;
 }
 .scriptContainer li {
-    margin: 8px 5px;
+    margin: 4px 5px;
     line-height: 25px;
     color: rgb(222, 222, 222);  
     /* list-style: none; */
@@ -296,3 +298,18 @@ h2 {
   background-color: white;
 }
 
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+  margin: 40px 30px;
+}
+
+@keyframes l5 {
+  0%   { box-shadow: 20px 0 #9ECAB7, -20px 0 #9ECAB722; background: #9ECAB7; }
+  33%  { box-shadow: 20px 0 #9ECAB7, -20px 0 #9ECAB722; background: #9ECAB722; }
+  66%  { box-shadow: 20px 0 #9ECAB722, -20px 0 #9ECAB7; background: #9ECAB722; }
+  100% { box-shadow: 20px 0 #9ECAB722, -20px 0 #9ECAB7; background: #9ECAB7; }
+}
