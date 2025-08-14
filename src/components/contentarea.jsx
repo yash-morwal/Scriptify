@@ -15,6 +15,7 @@ export default function ContentArea() {
             <Ideas/>
             <div className="scriptContainer text-white flex-1">
                 <Script />
+            {user.showErr && !user.load && <h1 className='contentHeading'>❌ Error: Pls try again</h1>}
             </div>
         </div>
     )

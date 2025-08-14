@@ -83,8 +83,9 @@ const Ideas = () => {
             <div className={`popup ${showPopup ? 'show' : ''}`}>You can select only 3 items. Click again to remove</div>
             <div className="ideasContainer">
                 {user.load && <h1 className='contentHeading'><div className="loader"></div></h1>}
-                {!user.load && !user.scriptStatus && <h1 className='contentHeading'>{response.heading}</h1>}
-                {!user.load && !user.scriptStatus && <ul className="listContainer">
+
+                {!user.load && !user.showErr && !user.scriptStatus && <h1 className='contentHeading'>{response.heading}</h1>}
+                {!user.load && !user.showErr && !user.scriptStatus && <ul className="listContainer">
                     {list}
                 </ul>}
             </div>

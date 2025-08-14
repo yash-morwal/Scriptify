@@ -9,8 +9,9 @@ export default function Apitestlab() {
     React.useEffect(()=>{
         if (Object.keys(user.preferences).length !== 0)
         axios
-            .post("http://localhost:8000/receiveinput", { input: JSON.stringify(user.preferences) })
+            .post(`${import.meta.env.VITE_API_URL}/receiveinput`, { input: JSON.stringify(user.preferences) })
             .then((response) => {
+                user.setShowErr(false)
                 user.setRawIdea(JSON.parse(response.data.result)) // return result so caller can use it
             })
             .catch((error) => {
@@ -23,9 +24,10 @@ export default function Apitestlab() {
     React.useEffect(()=>{
         if (user.chosenTopic.length !== 0)
         axios
-            .post("http://localhost:8000/receivetopics", { input: JSON.stringify(user.chosenTopic) })
+            .post(`${import.meta.env.VITE_API_URL}/receivetopics`, { input: JSON.stringify(user.chosenTopic) })
             .then((response) => {
                 user.setLoad(false)
+                user.setShowErr(false)
                 user.setRawScripts(response.data)
                 user.setScriptStatus(true)
                 console.log(response.data) // return result so caller can use it
@@ -40,7 +42,7 @@ export default function Apitestlab() {
     React.useEffect(()=>{
         if (user.selectedModel !== '')
         axios
-            .post("http://localhost:8000/selectModel", { input: user.selectedModel })
+            .post(`${import.meta.env.VITE_API_URL}/selectModel`, { input: user.selectedModel })
             .then((response) => {
                 console.log('model selected', response.data)
             })

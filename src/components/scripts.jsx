@@ -46,7 +46,7 @@ export default function Script(props) {
 
     return (
         <>
-            {!user.load && user.scriptStatus && <div className="scriptandbtn flex flex-row h-full">
+            {!user.load && user.scriptStatus && !user.showErr && <div className="scriptandbtn flex flex-row h-full">
                 <button onClick={() => prevScript()} className={`prevScript scriptBtn text-lg flex items-center justify-center p-[2px] h-[25px] w-[25px] rounded-[50px] self-center m-[15px] absolute left-5 ${displayScriptIndex === 0 ? 'unsel' : 'sel'}`}><svg xmlns="http://www.w3.org/2000/svg" className='arrowIconSVG' width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path d="M15 6l-6 6 6 6" />
                 </svg>
