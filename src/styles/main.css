@@ -251,7 +251,7 @@ h2, h3 {
 }
 .script strong{
     /* margin: 15px 10px; */
-    color: var(--accent-color); 
+    /* color: var(--accent-color);  */
     line-height: 25px; 
 }
 .scriptBtn{
