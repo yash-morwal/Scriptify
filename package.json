@@ -16,14 +16,17 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@google/genai": "^1.10.0",
+    "@supabase/supabase-js": "^2.106.0",
     "@tailwindcss/vite": "^4.1.11",
     "axios": "^1.11.0",
     "dotenv": "^17.2.0",
     "groq-sdk": "^0.26.0",
+    "jspdf": "^4.2.0",
     "openai": "^5.10.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-markdown": "^10.1.0",
+    "react-router-dom": "^6.30.3",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {

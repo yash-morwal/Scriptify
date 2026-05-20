@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import { UserContext } from "../App";
 
 export default function Navbar() {
@@ -56,7 +57,9 @@ export default function Navbar() {
                 </ul>
 
                 {/* login */}
-                <div className="login accent border-1 px-4 py-[6px] rounded-md mx-8 hover:bg-[var(--accent-color-bg)]"><a href="">LOG IN</a></div>
+                <div className="login accent border-1 px-4 py-[6px] rounded-md mx-8 hover:bg-[var(--accent-color-bg)]">
+                    <Link to="/auth">LOG IN</Link>
+                </div>
             </div>
             <div className="others"></div>
         </div>

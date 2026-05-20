@@ -11,15 +11,15 @@ export default function Buttons() {
     // Generic option selector template
     const OptionSelector = ({ label, options, selected, setSelected, className = "" }) => {
         return (
-            <div className="buttonContainer flex items-center flex-row w-full">
-                <div className={`label labelFor${label}`}>{label}</div>
-                <div className={`segmbuttons flex items-center justify-center flex-row gap-2 flex-1 ${className}`}>
+            <div className="buttonContainer flex flex-col w-full mb-5">
+                <div className={`text-[var(--text-muted)] text-[11px] uppercase tracking-wider font-semibold mb-2 ml-1 varela-round`}>{label}</div>
+                <div className={`segmbuttons flex flex-wrap gap-2 w-full ${className}`}>
                     {options.map((opt) => (
                         <button
                             key={opt}
                             type="button"
-                            className={`Buttons border-[2px] border-[#5a5a5a6f] px-[10px] inputrd h-[30px] flex-1 
-                            ${user.preferences[label] === opt ? "selected" : "unselected"}`}
+                            className={`Buttons border-[1px] px-2 py-1.5 rounded text-[11.5px] flex-1 min-w-[60px] cursor-pointer transition-colors outline-none
+                            ${user.preferences[label] === opt ? "bg-[var(--accent-color-bg)] text-[var(--accent-color)] border-[var(--accent-color)] font-semibold" : "bg-[var(--bg-panel)] text-[var(--text-secondary)] border-[var(--border-item)] hover:bg-[var(--bg-hover)]"}`}
                             onClick={() => {
                                 user.setPreferences((prev) => ({...prev, [label]: opt} ))
                             }}
@@ -36,15 +36,15 @@ export default function Buttons() {
     const Tones = () => {
         const tones = ['Story', 'Funny', 'Satire', 'Informative', 'Documentary'];
         return (
-            <div className="toneInput w-full">
-                <div className="label labelForTone ml-[5%]">Tone</div>
-                <div className="toneButtons flex border border-[#3d3d3d] h-[35px] inputrd overflow-hidden mt-2" id='toneButtons'>
+            <div className="toneInput w-full mb-5">
+                <div className="text-[var(--text-muted)] text-[11px] uppercase tracking-wider font-semibold mb-1.5 ml-1 varela-round">Tone</div>
+                <div className="toneButtons flex flex-wrap gap-2 w-full">
                     {tones.map(tone => (
                         <button
                             key={tone}
                             type="button"
-                            className={`tones outline-none roboto text-[12px] cursor-pointer border-l-[2px] border-[#56565688] flex-auto py-2 whitespace-nowrap 
-                            ${user.preferences.tone === tone ? "selected selecttone" : "unselected"}`}
+                            className={`tones outline-none roboto text-[11.5px] cursor-pointer border-[1px] px-2 py-1.5 rounded flex-auto whitespace-nowrap transition-colors
+                            ${user.preferences.tone === tone ? "bg-[var(--accent-color-bg)] text-[var(--accent-color)] border-[var(--accent-color)] font-semibold" : "bg-[var(--bg-panel)] text-[var(--text-secondary)] border-[var(--border-item)] hover:bg-[var(--bg-hover)]"}`}
                             onClick={() => user.setPreferences((prev) => ({...prev, "tone": `${tone}`} ))}
                         >
                             {tone}
@@ -61,7 +61,6 @@ export default function Buttons() {
             <OptionSelector
                 label="Language"
                 options={['English', 'Hindi', 'Hinglish']}
-                className="w-[200px]"
             />
         );
     };
@@ -71,7 +70,6 @@ export default function Buttons() {
             <OptionSelector
                 label="Length"
                 options={['Short', 'Long']}
-                className="w-[200px]"
             />
         );
     };
@@ -82,25 +80,17 @@ export default function Buttons() {
             <OptionSelector
                 label="Format"
                 options={['Bullet points', 'Paragraph']}
-                className="w-[200px]"
             />
         );
     };
 
 
     return (
-        <>
+        <div className="w-full mt-2">
             <Tones />
-            <hr />
-
             <Language />
-            <hr />
-
             <Length />
-            <hr />
-
             <Format />
-            <hr />
-        </>
+        </div>
     )
 }
