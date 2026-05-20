@@ -17,8 +17,8 @@ export default function Sidebar() {
     const [isResizing, setIsResizing] = useState(false);
     const [openPanels, setOpenPanels] = useState({
         history: false,
-        saved: true,
-        projects: true
+        saved: false,
+        projects: false
     });
     const [historyItems, setHistoryItems] = useState([])
     const [historyLoading, setHistoryLoading] = useState(false)
